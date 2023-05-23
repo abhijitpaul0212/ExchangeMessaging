@@ -31,11 +31,14 @@ RequestType:NEWORDER|OrderID:480069891|Token:0|Symbol:IFEU_BRN
 FMZ0022!|Side:B|Price:157.40000000000000568|Quantity:5|QuantityFilled:0|DisclosedQnty:5|Tim
 eStamp:1666287639395048969|Duration:DAY|OrderType:LIMIT|Account:bJEROM
 |Exchange:0|NumCopies:0
+
+
 Possible responses -
 ResponseType:NEW_ORDER_CONFIRM|OrderID:480069891|Symbol:IFEU_BRN
 FMZ0022!|Side:B|Price:157.40000000000000568|Quantity:5|AccountID:bJEROM
 |ErrorCode:1|TimeStamp:1666287639692625876|Exchange_Order_Id:13007294|ChildResponseTyp
 e:NULL_RESPONSE_MIDDLE|Duration:DAY|ExchTs:1666287639962000000
+
 ResponseType:TRADE_CONFIRM|OrderID:480069891|Symbol:IFEU_BRN
 FMZ0022!|Side:B|Price:158.40000000000000568|Quantity:3|AccountID:bJEROM
 |ErrorCode:1|TimeStamp:1666287790603407546|Exchange_Order_Id:13007306|ChildResponseTyp
