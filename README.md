@@ -1,5 +1,7 @@
 # ExchangeMessaging
 
+## Project Overview:
+
 On a front office trading platform, one of the services would send order orders to exchange for
 execution. Exchange may send a variety of responses to an order depending on various factors.
 Automation is an essential part of SDLC and we would like to automate this flow such that exchange
@@ -48,3 +50,25 @@ ResponseType:REJECT|OrderID:480069891|Symbol:IFEU_BRN
 FMZ0022!|Side:B|Price:158.40000000000000568|Quantity:4|AccountID:bJEROM
 |ErrorCode:100109|TimeStamp:1666287933899054797|Exchange_Order_Id:0|ChildResponseType:
 CANCEL_ORDER_REJECT_MIDDLE|Duration:DAY|ExchTs:0
+
+
+## Assumptions:
+
+1. Inbound message to the exchange is provided in .txt files
+2. Valid quantity is 5 and its multiples only
+3. Valid symbol is having 'BRN' in it
+4. Valid price is < 200 if above symbol matches
+5. Irrespective of symbol, if price is nbot equal to 123
+
+
+## Design Decision
+
+1. We will read the inbound message from given .txt file
+2. Once data is read, its converted into a dictionary dataset for better usage throughout the project
+3. We will create a parser method, who's purpose will be to parse each key-value pair from the dictionary dataset and than validate it as per the given rules.
+4. Once validated, we will construct appropriate outbound messages as per requirements.
+5. We will share the outbound messages in the console and at the same time we will generate .txt file as well for further usages.
+
+#### Out of Scope:
+
+1. Anything other then the above design decision is not within the scope of this project
